@@ -23,7 +23,9 @@
     "@angular/router": "~9.0.7",
     "@angular/service-worker": "~9.0.7",
     "@types/googlemaps": "^3.39.3",
+    "@types/scriptjs": "0.0.2",
     "rxjs": "~6.5.4",
+    "scriptjs": "^2.5.9",
     "tslib": "^1.10.0",
     "zone.js": "~0.10.2"
   },
