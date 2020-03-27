@@ -6,6 +6,8 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
+import { ScreensModule } from './screens/screens.module';
+import { DashboardComponent } from './screens/dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +17,9 @@ import { environment } from '../environments/environment';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }),
+
+    ScreensModule
   ],
   providers: [],
   bootstrap: [AppComponent]
