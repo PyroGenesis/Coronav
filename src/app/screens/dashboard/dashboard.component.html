@@ -6,3 +6,10 @@
 </div>
 
 <div id="map"></div>
+
+<div id="map-sliders">
+  <!-- For Day of the week -->
+  <mat-slider min="0" max="6" thumbLabel tickInterval="1" [displayWith]="getDayFromIndex" [(ngModel)]="currentDay" (change)="changeInDateTime($event)"></mat-slider>
+  <!-- For Hour of the day -->
+  <mat-slider min="0" max="23" thumbLabel tickInterval="1" [displayWith]="getHourFromIndex" [(ngModel)]="currentHour" (change)="changeInDateTime($event)"></mat-slider>
+</div>
