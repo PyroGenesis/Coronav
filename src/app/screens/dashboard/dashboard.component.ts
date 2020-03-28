@@ -2,6 +2,8 @@ import { Component, OnInit, AfterViewInit } from '@angular/core';
 import { get } from 'scriptjs';
 import { environment } from 'src/environments/environment';
 import tempJSON from 'src/assets/home_nearby.json';
+import { BackendService } from 'src/app/services/backend.service';
+import { Place } from 'src/app/models/place';
 // declare var google: any;
 // Above not needed anymore as we edited tsconfig.app.json to include googlemaps types when compiling
 
@@ -13,8 +15,24 @@ import tempJSON from 'src/assets/home_nearby.json';
 export class DashboardComponent implements OnInit, AfterViewInit {
 
   map: google.maps.Map<HTMLElement>;
+  circles: google.maps.Circle[] = [];
+  clickedLocationWindow: google.maps.InfoWindow = null;
 
-  constructor() { }
+  days: string[];
+  currentDay: string;
+  currentHour: number;
+
+  busyMeter: string[];
+  places: Place[];
+
+  constructor(private backend: BackendService) {
+    this.days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+    const currentDate = new Date();
+    this.currentDay = this.days[currentDate.getDay()];
+    this.currentHour = currentDate.getHours();
+
+    this.busyMeter = ['Not crowded', 'A little crowded', 'Quite crowded', 'Very crowded'];
+  }
 
   ngOnInit(): void {
   }
@@ -26,14 +44,8 @@ export class DashboardComponent implements OnInit, AfterViewInit {
         zoom: 17
       });
 
-      const wholesomeChoice = { lat: 33.664290, lng: -117.825285 };
-      const infoWindow: google.maps.InfoWindow = new google.maps.InfoWindow();
-
       // Try HTML5 geolocation. Nah it only works on https
-      const currentPos = {
-        lat: 33.6704072,
-        lng: -117.8282598
-      };
+      const currentPos: google.maps.LatLng = new google.maps.LatLng(33.6704072, -117.8282598);
       const currentPosMarker = new google.maps.Marker({
         position: currentPos,
         map: this.map,
@@ -41,40 +53,61 @@ export class DashboardComponent implements OnInit, AfterViewInit {
       });
       this.map.setCenter(currentPos);
 
-      const marker = new google.maps.Marker({
-        position: wholesomeChoice,
-        map: this.map,
+      this.backend.getNearbyPopularTimes(33.6471628, -117.8411294).subscribe((resp) => {
+        console.log(resp);
+        this.updateMapData(resp);
       });
 
-      const circles: google.maps.Circle[] = [];
-      let clickedLocationWindow: google.maps.InfoWindow = null;
 
-      for (const place of tempJSON.results) {
-
-        const circle = new google.maps.Circle({
-          strokeColor: '#FF0000',
-          strokeOpacity: 0.8,
-          strokeWeight: 2,
-          fillColor: '#FF0000',
-          fillOpacity: 0.35,
-          map: this.map,
-          center: place.geometry.location,
-          radius: 5
-        });
-
-        google.maps.event.addListener(circle, 'click', (e) => {
-          if (clickedLocationWindow) { clickedLocationWindow.close(); }
-          clickedLocationWindow = new google.maps.InfoWindow();
-          clickedLocationWindow.setContent(place.name);
-          clickedLocationWindow.setPosition(e.latLng);
-          clickedLocationWindow.open(this.map);
-        });
-
-        circles.push(circle);
-      }
+      this.map.addListener('idle', () => {
+        if (!currentPos.equals(this.map.getCenter())) {
+          // same code repeated as above
+          this.backend.getNearbyPopularTimes(33.6471628, -117.8411294).subscribe((resp) => {
+            console.log(resp);
+            this.updateMapData(resp);
+          });
+        }
+      });
 
     });
+  }
 
+  updateMapData(resp: any) {
+
+    for (const circle of this.circles) {
+      google.maps.event.clearListeners(circle, 'click');
+    }
+    this.circles.length = 0;
+    if (this.clickedLocationWindow) { this.clickedLocationWindow.close(); }
+
+    this.places = Place.fromObjArr(resp);
+    for (const place of this.places) {
+
+      const placeStatus = this.busyMeter[Math.floor(place.popularTimes.find(p => p.day === this.currentDay).times[this.currentHour] / 25)];
+      // console.log(place.popularTimes.find(p => p.day === this.currentDay).times[this.currentHour]);
+
+
+      const circle = new google.maps.Circle({
+        strokeColor: '#FF0000',
+        strokeOpacity: 0.8,
+        strokeWeight: 2,
+        fillColor: '#FF0000',
+        fillOpacity: 0.35,
+        map: this.map,
+        center: place.coordinates,
+        radius: 5
+      });
+
+      google.maps.event.addListener(circle, 'click', (e) => {
+        if (this.clickedLocationWindow) { this.clickedLocationWindow.close(); }
+        this.clickedLocationWindow = new google.maps.InfoWindow();
+        this.clickedLocationWindow.setContent(`<b>${place.name}<\b><br>${placeStatus}`);
+        this.clickedLocationWindow.setPosition(e.latLng);
+        this.clickedLocationWindow.open(this.map);
+      });
+
+      this.circles.push(circle);
+    }
   }
 
   handleLocationError(browserHasGeolocation: boolean, infoWindow: any, pos: any) {
@@ -85,4 +118,3 @@ export class DashboardComponent implements OnInit, AfterViewInit {
     infoWindow.open(this.map);
   }
 }
-
