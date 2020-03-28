@@ -77,6 +77,15 @@ export class DashboardComponent implements OnInit, AfterViewInit {
       });
       this.map.setCenter(currentPos);
 
+      // const input = document.getElementById('pac-input') as HTMLInputElement;
+      // const searchBox = new google.maps.places.SearchBox(input);
+      // this.map.controls[google.maps.ControlPosition.TOP_LEFT].push(input);
+
+      // // Bias the SearchBox results towards current map's viewport.
+      // this.map.addListener('bounds_changed', () => {
+      //   searchBox.setBounds(this.map.getBounds());
+      // });
+
       this.backend.getNearbyPopularTimes(currentPos.lat(), currentPos.lng()).subscribe((resp) => {
         console.log(resp);
         this.updateMapData(resp);
@@ -121,7 +130,7 @@ export class DashboardComponent implements OnInit, AfterViewInit {
       if (busynessIndex > 3) { busynessIndex = 3; }
       const placeStatus: string = this.busyMeter[busynessIndex];
       const placeColor: string = this.colors[busynessIndex];
-      console.log(place.name, place.popularTimes.find(p => p.day === currentDayText).times[this.currentHour]);
+      // console.log(place.name, place.popularTimes.find(p => p.day === currentDayText).times[this.currentHour]);
 
 
       const circle = new google.maps.Circle({

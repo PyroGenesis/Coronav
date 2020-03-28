@@ -15,6 +15,18 @@
     margin: 0 16px;
 }
 
+#search-bar {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px 10px 0 10px;
+    display: flex;
+}
+
+#search-form-field {
+    z-index: 5;
+    width: 100%;
+}
+
 #map {
     // margin-top: 60px;
     height: calc(100% - 150px);
