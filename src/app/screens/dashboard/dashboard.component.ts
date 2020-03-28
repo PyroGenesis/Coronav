@@ -64,7 +64,8 @@ export class DashboardComponent implements OnInit, AfterViewInit {
     get('https://maps.googleapis.com/maps/api/js?key=' + environment.MAPS_API_KEY, () => {
       this.map = new google.maps.Map(document.getElementById('map'), {
         center: { lat: 34.052235, lng: -118.243683 },
-        zoom: 17
+        zoom: 17,
+        clickableIcons: false
       });
 
       // Try HTML5 geolocation. Nah it only works on https
@@ -106,6 +107,10 @@ export class DashboardComponent implements OnInit, AfterViewInit {
 
     if (resp != null) {
       this.places = Place.fromObjArr(resp);
+      // if (this.clickedLocationWindow) {
+      //   this.clickedLocationWindow.close();
+      //   this.clickedLocationWindow = null;
+      // }
     }
 
     const currentDayText = this.days[this.currentDay];
@@ -127,7 +132,7 @@ export class DashboardComponent implements OnInit, AfterViewInit {
         fillOpacity: 0.35,
         map: this.map,
         center: place.coordinates,
-        radius: 5
+        radius: 10
       });
 
       google.maps.event.addListener(circle, 'click', (e) => {
@@ -138,10 +143,10 @@ export class DashboardComponent implements OnInit, AfterViewInit {
         this.clickedLocationWindow.setContent(`<b>${place.name}</b><br>${placeStatus}`);
         this.clickedLocationWindow.setPosition(e.latLng);
         this.clickedLocationWindow.open(this.map);
+        google.maps.event.addListener(this.clickedLocationWindow, 'closeclick', () => {
+          this.clickedLocationWindow = null;
+        });
       });
-
-      // google.maps.event.trigger();
-
       this.circles.push(circle);
     }
 
@@ -149,6 +154,7 @@ export class DashboardComponent implements OnInit, AfterViewInit {
     //   latLng: new google.maps.LatLng(33.6676238, -117.8292908)
     // };
     // google.maps.event.trigger(this.circles[0], 'click', e);
+
 
 
     // Refresh the open window when sliders or center changes
