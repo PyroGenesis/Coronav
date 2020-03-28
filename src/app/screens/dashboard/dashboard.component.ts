@@ -30,24 +30,6 @@ export class DashboardComponent implements OnInit, AfterViewInit {
       const infoWindow: google.maps.InfoWindow = new google.maps.InfoWindow();
 
       // Try HTML5 geolocation. Nah it only works on https
-      // if (navigator.geolocation) {
-      //   navigator.geolocation.getCurrentPosition((position) => {
-      //     const pos = {
-      //       lat: position.coords.latitude,
-      //       lng: position.coords.longitude
-      //     };
-
-      //     infoWindow.setPosition(pos);
-      //     infoWindow.setContent('Location found.');
-      //     infoWindow.open(this.map);
-      //     this.map.setCenter(pos);
-      //   }, () => {
-      //     this.handleLocationError(true, infoWindow, this.map.getCenter());
-      //   });
-      // } else {
-      //   // Browser doesn't support Geolocation
-      //   this.handleLocationError(false, infoWindow, this.map.getCenter());
-      // }
       const currentPos = {
         lat: 33.6704072,
         lng: -117.8282598
@@ -68,10 +50,6 @@ export class DashboardComponent implements OnInit, AfterViewInit {
       let clickedLocationWindow: google.maps.InfoWindow = null;
 
       for (const place of tempJSON.results) {
-        // const box = place.geometry.viewport;
-        // const verticalDelta = (box.northeast.lat - box.southwest.lat) / 4;
-        // const horizontalDelta = (box.northeast.lng - box.southwest.lng) / 4;
-        // console.log(verticalDelta, horizontalDelta);
 
         const circle = new google.maps.Circle({
           strokeColor: '#FF0000',
@@ -93,40 +71,8 @@ export class DashboardComponent implements OnInit, AfterViewInit {
         });
 
         circles.push(circle);
-
-        // new google.maps.
-
-        // rectangles.push(new google.maps.Rectangle({
-        //   strokeColor: '#FF0000',
-        //   strokeOpacity: 0.8,
-        //   strokeWeight: 2,
-        //   fillColor: '#FF0000',
-        //   fillOpacity: 0.35,
-        //   map: this.map,
-        //   bounds: {
-        //     north: box.northeast.lat - verticalDelta,
-        //     south: box.southwest.lat + verticalDelta,
-        //     east: box.northeast.lng - horizontalDelta,
-        //     west: box.southwest.lng + horizontalDelta
-        //   }
-        // }));
-        // break;
       }
 
-      // const rectangle = new google.maps.Rectangle({
-      //   strokeColor: '#FF0000',
-      //   strokeOpacity: 0.8,
-      //   strokeWeight: 2,
-      //   fillColor: '#FF0000',
-      //   fillOpacity: 0.35,
-      //   map: this.map,
-      //   bounds: {
-      //     north: 33.6487673802915,
-      //     south: 33.6460694197085,
-      //     east: -117.8395834697085,
-      //     west: -117.8422814302915
-      //   }
-      // });
     });
 
   }
