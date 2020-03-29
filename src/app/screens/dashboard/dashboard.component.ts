@@ -6,6 +6,7 @@ import { BackendService } from 'src/app/services/backend.service';
 import { Place, SearchPlace } from 'src/app/models/place';
 import { MatSliderChange } from '@angular/material/slider';
 import { MatBottomSheet } from '@angular/material/bottom-sheet';
+import { FeedbackDrawerComponent } from './feedback-drawer/feedback-drawer.component';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { Subscription } from 'rxjs';
 // declare var google: any;
@@ -271,6 +272,12 @@ export class DashboardComponent implements OnInit, AfterViewInit {
     });
   }
 
+  openDrawer() {
+    this.drawer.open(FeedbackDrawerComponent, { data: {
+      busyMeter: this.busyMeter,
+      locationName: 'Hardcoded name'
+    }});
+  }
 
   handleLocationError(browserHasGeolocation: boolean, infoWindow: any, pos: any) {
     infoWindow.setPosition(pos);
@@ -278,5 +285,9 @@ export class DashboardComponent implements OnInit, AfterViewInit {
       'Error: The Geolocation service failed.' :
       'Error: Your browser doesn\'t support geolocation.');
     infoWindow.open(this.map);
+  }
+
+  test(param) {
+    console.log(param);
   }
 }

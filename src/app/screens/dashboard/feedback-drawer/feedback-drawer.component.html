@@ -1,0 +1,4 @@
+<mat-action-list>
+  <h3 matSubheader>You are at {{data.locationName}}. How would you rate the crowd here?</h3>
+  <button *ngFor="let b of data.busyMeter" mat-list-item (click)="dismiss()"> {{b}} </button>
+</mat-action-list>
