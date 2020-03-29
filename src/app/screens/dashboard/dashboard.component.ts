@@ -7,7 +7,7 @@ import { Place, SearchPlace } from 'src/app/models/place';
 import { MatSliderChange } from '@angular/material/slider';
 import { MatBottomSheet } from '@angular/material/bottom-sheet';
 import { FeedbackDrawerComponent } from './feedback-drawer/feedback-drawer.component';
-import { MatSnackBar } from '@angular/material/snack-bar';
+import { MatSnackBar, MatSnackBarRef, SimpleSnackBar } from '@angular/material/snack-bar';
 import { Subscription } from 'rxjs';
 // declare var google: any;
 // Above not needed anymore as we edited tsconfig.app.json to include googlemaps types when compiling
@@ -36,6 +36,7 @@ export class DashboardComponent implements OnInit, AfterViewInit {
 
   searchTerms: string;
   map$: Subscription;
+  snack$: MatSnackBarRef<SimpleSnackBar>;
   justSearched = false;
 
   constructor(private backend: BackendService, public snack: MatSnackBar, public drawer: MatBottomSheet) {
@@ -95,21 +96,28 @@ export class DashboardComponent implements OnInit, AfterViewInit {
       //   searchBox.setBounds(this.map.getBounds());
       // });
 
-      if (this.map$) { this.map$.unsubscribe(); }
+      if (this.map$ && !this.map$?.closed) { this.map$.unsubscribe(); }
+      this.snack$ = this.snack.open('Loading nearby places!');
       this.map$ = this.backend.getNearbyPopularTimes(currentPos.lat(), currentPos.lng()).subscribe((resp) => {
         console.log(resp);
         this.updateMapData(resp);
+      });
+      this.map$.add(() => {
+        this.snack$.dismiss();
       });
 
 
       this.map.addListener('idle', () => {
         if (!currentPos.equals(this.map.getCenter()) && !this.justSearched) {
           // same code repeated as above
-          currentPos = this.map.getCenter();
-          if (this.map$) { this.map$.unsubscribe(); }
+          if (this.map$ && !this.map$.closed) { this.map$.unsubscribe(); }
+          this.snack$ = this.snack.open('Updating nearby places!');
           this.map$ = this.backend.getNearbyPopularTimes(currentPos.lat(), currentPos.lng()).subscribe((resp) => {
             console.log(resp);
             this.updateMapData(resp);
+          });
+          this.map$.add(() => {
+            this.snack$.dismiss();
           });
         }
         this.justSearched = false;
@@ -118,14 +126,15 @@ export class DashboardComponent implements OnInit, AfterViewInit {
     });
   }
 
-  advancedInfoBoxContent(placeObj: SearchPlace | Place, placeStatus: string): string {
+  advancedInfoBoxContent(placeObj: SearchPlace | Place, placeStatus: string, color: string): string {
+    if (color === this.colors[0]) { color = '#000000'; }
     return `
       <div class="poi-info-window gm-style">
         <div class="title full-width">${placeObj.name}</div>
         <div class="address">
           <div class="address-line full-width">${placeObj.address}</div>
         </div>
-        <p>${placeStatus}</p>
+        <p style="font-size:14px;color:${color}">${placeStatus}</p>
         <div class="view-link"> <a target="_blank" href="https://maps.google.com/maps?ll=${placeObj.coordinates.lat()},${placeObj.coordinates.lng()}"> <span> View on Google Maps </span> </a> </div>
       </div>
     `;
@@ -170,7 +179,7 @@ export class DashboardComponent implements OnInit, AfterViewInit {
         this.clickedLocationWindow = new google.maps.InfoWindow();
         this.clickedLatLng = circle.getCenter();
         this.clickedCircle = circle;
-        this.clickedLocationWindow.setContent(this.advancedInfoBoxContent(place, placeStatus));
+        this.clickedLocationWindow.setContent(this.advancedInfoBoxContent(place, placeStatus, placeColor));
         this.clickedLocationWindow.setPosition(e.latLng);
         this.clickedLocationWindow.open(this.map);
         google.maps.event.addListener(this.clickedLocationWindow, 'closeclick', () => {
@@ -212,7 +221,8 @@ export class DashboardComponent implements OnInit, AfterViewInit {
       return;
     }
 
-    if (this.map$) { this.map$.unsubscribe(); }
+    if (this.map$ && !this.map$.closed) { this.map$.unsubscribe(); }
+    this.snack$ = this.snack.open('Searching!');
     this.map$ = this.backend.getSearchResults(this.searchTerms).subscribe((resp) => {
       console.log(resp);
       const mapDataResp = {
@@ -254,7 +264,7 @@ export class DashboardComponent implements OnInit, AfterViewInit {
         this.clickedLocationWindow = new google.maps.InfoWindow();
         this.clickedLatLng = circle.getCenter();
         this.clickedCircle = circle;
-        this.clickedLocationWindow.setContent(this.advancedInfoBoxContent(searchPlace, searchPlaceStatus));
+        this.clickedLocationWindow.setContent(this.advancedInfoBoxContent(searchPlace, searchPlaceStatus, searchPlaceColor));
         this.clickedLocationWindow.setPosition(e.latLng);
         this.clickedLocationWindow.open(this.map);
         google.maps.event.addListener(this.clickedLocationWindow, 'closeclick', () => {
@@ -269,6 +279,9 @@ export class DashboardComponent implements OnInit, AfterViewInit {
       this.map.panToBounds(new google.maps.LatLngBounds(searchPlace.viewport.southwest, searchPlace.viewport.northeast));
       google.maps.event.trigger(circle, 'click', { latLng: circle.getCenter()});
       // this.map$.unsubscribe();
+    });
+    this.map$.add(() => {
+      this.snack$.dismiss();
     });
   }
 
@@ -286,6 +299,8 @@ export class DashboardComponent implements OnInit, AfterViewInit {
       'Error: Your browser doesn\'t support geolocation.');
     infoWindow.open(this.map);
   }
+
+  // makeDummyArray
 
   test(param) {
     console.log(param);

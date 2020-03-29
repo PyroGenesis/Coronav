@@ -11,7 +11,8 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatBottomSheetModule } from '@angular/material/bottom-sheet';
 import { FeedbackDrawerComponent } from './dashboard/feedback-drawer/feedback-drawer.component';
 import { MatListModule } from '@angular/material/list';
-import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { MatSnackBarModule, MAT_SNACK_BAR_DEFAULT_OPTIONS } from '@angular/material/snack-bar';
+import { MatSelectModule } from '@angular/material/select';
 
 
 
@@ -27,8 +28,10 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
     MatIconModule,
     MatBottomSheetModule,
     MatListModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+    MatSelectModule
   ],
-  exports: [ DashboardComponent ]
+  exports: [ DashboardComponent ],
+  providers: [{provide: MAT_SNACK_BAR_DEFAULT_OPTIONS, useValue: {verticalPosition: 'top'}}]
 })
 export class ScreensModule { }
