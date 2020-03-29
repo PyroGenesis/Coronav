@@ -32,6 +32,6 @@ import { MatSelectModule } from '@angular/material/select';
     MatSelectModule
   ],
   exports: [ DashboardComponent ],
-  providers: [{provide: MAT_SNACK_BAR_DEFAULT_OPTIONS, useValue: {verticalPosition: 'top'}}]
+  // providers: [{provide: MAT_SNACK_BAR_DEFAULT_OPTIONS, useValue: {verticalPosition: 'top'}}]
 })
 export class ScreensModule { }

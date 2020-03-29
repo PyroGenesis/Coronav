@@ -1,7 +1,6 @@
 import { Component, OnInit, AfterViewInit } from '@angular/core';
 import { get } from 'scriptjs';
 import { environment } from 'src/environments/environment';
-import tempJSON from 'src/assets/home_nearby.json';
 import { BackendService } from 'src/app/services/backend.service';
 import { Place, SearchPlace } from 'src/app/models/place';
 import { MatSliderChange } from '@angular/material/slider';
@@ -41,7 +40,7 @@ export class DashboardComponent implements OnInit, AfterViewInit {
 
   constructor(private backend: BackendService, public snack: MatSnackBar, public drawer: MatBottomSheet) {
     this.days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
-    this.colors = ['#FFFFFF', '#FFD700', '#FFA500', '#FF0000'];
+    this.colors = ['#98FB98', '#FFD700', '#FFA500', '#FF0000'];
     const currentDate = new Date();
     this.currentDay = currentDate.getDay();
     this.currentHour = currentDate.getHours();
@@ -74,12 +73,13 @@ export class DashboardComponent implements OnInit, AfterViewInit {
     get('https://maps.googleapis.com/maps/api/js?key=' + environment.MAPS_API_KEY, () => {
       this.map = new google.maps.Map(document.getElementById('map'), {
         center: { lat: 34.052235, lng: -118.243683 },
-        zoom: 17,
+        zoom: 18,
         // clickableIcons: false
       });
 
       // Try HTML5 geolocation. Nah it only works on https
-      let currentPos: google.maps.LatLng = new google.maps.LatLng(33.6704072, -117.8282598);
+      // const currentPos: google.maps.LatLng = new google.maps.LatLng(33.6704072, -117.8282598);
+      let currentPos: google.maps.LatLng = new google.maps.LatLng(34.0284007, -118.4525252);
       const currentPosMarker = new google.maps.Marker({
         position: currentPos,
         map: this.map,
@@ -97,28 +97,29 @@ export class DashboardComponent implements OnInit, AfterViewInit {
       // });
 
       if (this.map$ && !this.map$?.closed) { this.map$.unsubscribe(); }
-      this.snack$ = this.snack.open('Loading nearby places!');
+      // this.snack$ = this.snack.open('Loading nearby places!');
       this.map$ = this.backend.getNearbyPopularTimes(currentPos.lat(), currentPos.lng()).subscribe((resp) => {
         console.log(resp);
         this.updateMapData(resp);
       });
-      this.map$.add(() => {
-        this.snack$.dismiss();
-      });
+      // this.map$.add(() => {
+      //   this.snack$.dismiss();
+      // });
 
 
       this.map.addListener('idle', () => {
         if (!currentPos.equals(this.map.getCenter()) && !this.justSearched) {
           // same code repeated as above
+          currentPos = this.map.getCenter();
           if (this.map$ && !this.map$.closed) { this.map$.unsubscribe(); }
-          this.snack$ = this.snack.open('Updating nearby places!');
+          // this.snack$ = this.snack.open('Updating nearby places!');
           this.map$ = this.backend.getNearbyPopularTimes(currentPos.lat(), currentPos.lng()).subscribe((resp) => {
             console.log(resp);
             this.updateMapData(resp);
           });
-          this.map$.add(() => {
-            this.snack$.dismiss();
-          });
+          // this.map$.add(() => {
+          //   this.snack$.dismiss();
+          // });
         }
         this.justSearched = false;
       });
@@ -150,6 +151,7 @@ export class DashboardComponent implements OnInit, AfterViewInit {
 
     if (resp != null) {
       this.places = Place.fromObjArr(resp);
+      // console.log(this.places);
     }
 
     const currentDayText = this.days[this.currentDay];
@@ -162,6 +164,7 @@ export class DashboardComponent implements OnInit, AfterViewInit {
       const placeColor: string = this.colors[busynessIndex];
       // console.log(place.name, place.popularTimes.find(p => p.day === currentDayText).times[this.currentHour]);
 
+      // console.log(place.name, placeStatus, placeColor, place.coordinates.lat(), place.coordinates.lng());
 
       const circle = new google.maps.Circle({
         strokeColor: placeColor,
@@ -222,7 +225,7 @@ export class DashboardComponent implements OnInit, AfterViewInit {
     }
 
     if (this.map$ && !this.map$.closed) { this.map$.unsubscribe(); }
-    this.snack$ = this.snack.open('Searching!');
+    // this.snack$ = this.snack.open('Searching!');
     this.map$ = this.backend.getSearchResults(this.searchTerms).subscribe((resp) => {
       console.log(resp);
       const mapDataResp = {
@@ -280,16 +283,19 @@ export class DashboardComponent implements OnInit, AfterViewInit {
       google.maps.event.trigger(circle, 'click', { latLng: circle.getCenter()});
       // this.map$.unsubscribe();
     });
-    this.map$.add(() => {
-      this.snack$.dismiss();
-    });
+    // this.map$.add(() => {
+    //   this.snack$.dismiss();
+    // });
   }
 
   openDrawer() {
-    this.drawer.open(FeedbackDrawerComponent, { data: {
+    const drawer$ = this.drawer.open(FeedbackDrawerComponent, { data: {
       busyMeter: this.busyMeter,
-      locationName: 'Hardcoded name'
+      locationName: 'Pico Apartments'
     }});
+    drawer$.afterDismissed().subscribe(() => {
+      this.snack$ = this.snack.open('Thank you for your feedback!', '', { duration: 2000 });
+    });
   }
 
   handleLocationError(browserHasGeolocation: boolean, infoWindow: any, pos: any) {

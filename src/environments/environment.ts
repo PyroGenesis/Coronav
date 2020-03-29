@@ -10,9 +10,9 @@ export const environment = {
   production: false,
   MAPS_API_KEY: credentials.MAPS_API_KEY,
 
-  getNearbyPopularTimesURL: SERVER_URL + 'getNearbyPopularTimes',
+  getNearbyPopularTimesURL: SERVER_URL + 'getNearbyPopularTimes6',
   getNearbyPlaceIdsURL: SERVER_URL + 'getNearbyPlaceIds',
-  getSearchResultsURL: SERVER_URL + 'getSearchResults',
+  getSearchResultsURL: SERVER_URL + 'getSearchResults2',
 };
 
 /*
