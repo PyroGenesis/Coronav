@@ -11,7 +11,8 @@ export const environment = {
   MAPS_API_KEY: credentials.MAPS_API_KEY,
 
   getNearbyPopularTimesURL: SERVER_URL + 'getNearbyPopularTimes',
-  getNearbyPlaceIdsURL: SERVER_URL + 'getNearbyPlaceIds'
+  getNearbyPlaceIdsURL: SERVER_URL + 'getNearbyPlaceIds',
+  getSearchResultsURL: SERVER_URL + 'getSearchResults',
 };
 
 /*

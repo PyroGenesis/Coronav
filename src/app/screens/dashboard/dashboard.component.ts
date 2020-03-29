@@ -3,8 +3,11 @@ import { get } from 'scriptjs';
 import { environment } from 'src/environments/environment';
 import tempJSON from 'src/assets/home_nearby.json';
 import { BackendService } from 'src/app/services/backend.service';
-import { Place } from 'src/app/models/place';
+import { Place, SearchPlace } from 'src/app/models/place';
 import { MatSliderChange } from '@angular/material/slider';
+import { MatBottomSheet } from '@angular/material/bottom-sheet';
+import { MatSnackBar } from '@angular/material/snack-bar';
+import { Subscription } from 'rxjs';
 // declare var google: any;
 // Above not needed anymore as we edited tsconfig.app.json to include googlemaps types when compiling
 
@@ -30,7 +33,11 @@ export class DashboardComponent implements OnInit, AfterViewInit {
   busyMeter: string[];
   places: Place[];
 
-  constructor(private backend: BackendService) {
+  searchTerms: string;
+  map$: Subscription;
+  justSearched = false;
+
+  constructor(private backend: BackendService, public snack: MatSnackBar, public drawer: MatBottomSheet) {
     this.days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
     this.colors = ['#FFFFFF', '#FFD700', '#FFA500', '#FF0000'];
     const currentDate = new Date();
@@ -38,6 +45,7 @@ export class DashboardComponent implements OnInit, AfterViewInit {
     this.currentHour = currentDate.getHours();
 
     this.busyMeter = ['Not crowded', 'A little crowded', 'Quite crowded', 'Very crowded'];
+    this.searchTerms = '';
   }
 
   getDayFromIndex(index: number): string {
@@ -65,7 +73,7 @@ export class DashboardComponent implements OnInit, AfterViewInit {
       this.map = new google.maps.Map(document.getElementById('map'), {
         center: { lat: 34.052235, lng: -118.243683 },
         zoom: 17,
-        clickableIcons: false
+        // clickableIcons: false
       });
 
       // Try HTML5 geolocation. Nah it only works on https
@@ -86,24 +94,40 @@ export class DashboardComponent implements OnInit, AfterViewInit {
       //   searchBox.setBounds(this.map.getBounds());
       // });
 
-      this.backend.getNearbyPopularTimes(currentPos.lat(), currentPos.lng()).subscribe((resp) => {
+      if (this.map$) { this.map$.unsubscribe(); }
+      this.map$ = this.backend.getNearbyPopularTimes(currentPos.lat(), currentPos.lng()).subscribe((resp) => {
         console.log(resp);
         this.updateMapData(resp);
       });
 
 
       this.map.addListener('idle', () => {
-        if (!currentPos.equals(this.map.getCenter())) {
+        if (!currentPos.equals(this.map.getCenter()) && !this.justSearched) {
           // same code repeated as above
           currentPos = this.map.getCenter();
-          this.backend.getNearbyPopularTimes(currentPos.lat(), currentPos.lng()).subscribe((resp) => {
+          if (this.map$) { this.map$.unsubscribe(); }
+          this.map$ = this.backend.getNearbyPopularTimes(currentPos.lat(), currentPos.lng()).subscribe((resp) => {
             console.log(resp);
             this.updateMapData(resp);
           });
         }
+        this.justSearched = false;
       });
 
     });
+  }
+
+  advancedInfoBoxContent(placeObj: SearchPlace | Place, placeStatus: string): string {
+    return `
+      <div class="poi-info-window gm-style">
+        <div class="title full-width">${placeObj.name}</div>
+        <div class="address">
+          <div class="address-line full-width">${placeObj.address}</div>
+        </div>
+        <p>${placeStatus}</p>
+        <div class="view-link"> <a target="_blank" href="https://maps.google.com/maps?ll=${placeObj.coordinates.lat()},${placeObj.coordinates.lng()}"> <span> View on Google Maps </span> </a> </div>
+      </div>
+    `;
   }
 
   updateMapData(resp: any) {
@@ -116,10 +140,6 @@ export class DashboardComponent implements OnInit, AfterViewInit {
 
     if (resp != null) {
       this.places = Place.fromObjArr(resp);
-      // if (this.clickedLocationWindow) {
-      //   this.clickedLocationWindow.close();
-      //   this.clickedLocationWindow = null;
-      // }
     }
 
     const currentDayText = this.days[this.currentDay];
@@ -149,7 +169,7 @@ export class DashboardComponent implements OnInit, AfterViewInit {
         this.clickedLocationWindow = new google.maps.InfoWindow();
         this.clickedLatLng = circle.getCenter();
         this.clickedCircle = circle;
-        this.clickedLocationWindow.setContent(`<b>${place.name}</b><br>${placeStatus}`);
+        this.clickedLocationWindow.setContent(this.advancedInfoBoxContent(place, placeStatus));
         this.clickedLocationWindow.setPosition(e.latLng);
         this.clickedLocationWindow.open(this.map);
         google.maps.event.addListener(this.clickedLocationWindow, 'closeclick', () => {
@@ -182,6 +202,74 @@ export class DashboardComponent implements OnInit, AfterViewInit {
     }
   }
 
+  search() {
+    this.searchTerms = this.searchTerms.trim();
+    if (this.searchTerms.length === 0) {
+      this.snack.open('Search field is empty!', '', {
+        duration: 2000
+      });
+      return;
+    }
+
+    if (this.map$) { this.map$.unsubscribe(); }
+    this.map$ = this.backend.getSearchResults(this.searchTerms).subscribe((resp) => {
+      console.log(resp);
+      const mapDataResp = {
+        places: resp.nearbyPlaces
+      };
+      if (this.clickedLocationWindow) {
+        this.clickedLocationWindow.close();
+        this.clickedLocationWindow = null;
+      }
+      this.updateMapData(mapDataResp);
+
+      const searchPlace: SearchPlace = new SearchPlace(resp.searchResult);
+
+      const currentDayText = this.days[this.currentDay];
+      let searchPlaceStatus: string = this.busyMeter[0];
+      let searchPlaceColor: string = this.colors[0];
+
+      if (searchPlace.hasPopularTimes) {
+        let busynessIndex = Math.floor(searchPlace.popularTimes.find(p => p.day === currentDayText).times[this.currentHour] / 25);
+        // For the extreme cases, pop >= 100
+        if (busynessIndex > 3) { busynessIndex = 3; }
+        searchPlaceStatus = this.busyMeter[busynessIndex];
+        searchPlaceColor = this.colors[busynessIndex];
+      }
+
+      const circle = new google.maps.Circle({
+        strokeColor: searchPlaceColor,
+        strokeOpacity: 0.8,
+        strokeWeight: 2,
+        fillColor: searchPlaceColor,
+        fillOpacity: 0.35,
+        map: this.map,
+        center: searchPlace.coordinates,
+        radius: 10
+      });
+
+      google.maps.event.addListener(circle, 'click', (e) => {
+        if (this.clickedLocationWindow) { this.clickedLocationWindow.close(); }
+        this.clickedLocationWindow = new google.maps.InfoWindow();
+        this.clickedLatLng = circle.getCenter();
+        this.clickedCircle = circle;
+        this.clickedLocationWindow.setContent(this.advancedInfoBoxContent(searchPlace, searchPlaceStatus));
+        this.clickedLocationWindow.setPosition(e.latLng);
+        this.clickedLocationWindow.open(this.map);
+        google.maps.event.addListener(this.clickedLocationWindow, 'closeclick', () => {
+          this.clickedLocationWindow = null;
+        });
+      });
+      this.circles.push(circle);
+
+      this.justSearched = true;
+      this.map.setCenter(searchPlace.coordinates);
+      this.justSearched = true;
+      this.map.panToBounds(new google.maps.LatLngBounds(searchPlace.viewport.southwest, searchPlace.viewport.northeast));
+      google.maps.event.trigger(circle, 'click', { latLng: circle.getCenter()});
+      // this.map$.unsubscribe();
+    });
+  }
 
 
   handleLocationError(browserHasGeolocation: boolean, infoWindow: any, pos: any) {

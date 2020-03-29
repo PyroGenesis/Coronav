@@ -8,9 +8,10 @@
 <div id="search-bar">
   <mat-form-field id="search-form-field">
     <mat-label>Search</mat-label>
-    <input matInput placeholder="Enter your search terms" value="">
+    <input matInput placeholder="Enter your search terms" [(ngModel)]="searchTerms" (keydown.enter)="search()">
   </mat-form-field>
-  <button mat-icon-button color="primary" aria-label="Example icon-button with a heart icon">
+  <button mat-icon-button color="primary" aria-label="Example icon-button with a heart icon"
+    (click)=search()>
     <mat-icon>search</mat-icon>
   </button>
 </div>
