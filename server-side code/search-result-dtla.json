@@ -1,0 +1,1783 @@
+{
+  "places": [
+    {
+      "details": {
+        "address": "S Hope St, Los Angeles, CA 90071, USA",  // formatted_address
+        "coordinates": {                                     // from geometry
+          "lat": 34.0521459, 
+          "lng": -118.254087
+        }, 
+        "hasPopularTimes": false,   
+        "id": "ChIJRyTBGLPHwoARZvPRKKbGn0I",                  // place_id 
+        "name": "Public Art \"Mind, Body and Spirit\"",       // name
+        "types": [                                            // type
+          "tourist_attraction", 
+          "point_of_interest", 
+          "establishment"
+        ]
+      }, 
+      "place_id": "ChIJRyTBGLPHwoARZvPRKKbGn0I"               // place_id
+    }, 
+    {
+      "details": {
+        "address": "401 S Hope St, Los Angeles, CA 90071, USA", 
+        "coordinates": {
+          "lat": 34.0522612, 
+          "lng": -118.2540725
+        }, 
+        "hasPopularTimes": true, 
+        "id": "ChIJrUBQGLPHwoAR-0SU8J1hLmY", 
+        "international_phone_number": "+1 213-244-1444", 
+        "name": "Z's DTLA", 
+        "populartimes": [
+          {
+            "data": [
+              0, 
+              0, 
+              0, 
+              0, 
+              0, 
+              0, 
+              0, 
+              10, 
+              15, 
+              18, 
+              23, 
+              39, 
+              60, 
+              47, 
+              15, 
+              0, 
+              0, 
+              0, 
+              0, 
+              0, 
+              0, 
+              0, 
+              0, 
+              0
+            ], 
+            "name": "Monday"
+          }, 
+          {
+            "data": [
+              0, 
+              0, 
+              0, 
+              0, 
+              0, 
+              0, 
+              0, 
+              5, 
+              10, 
+              10, 
+              13, 
+              21, 
+              44, 
+              50, 
+              26, 
+              0, 
+              0, 
+              0, 
+              0, 
+              0, 
+              0, 
+              0, 
+              0, 
+              0
+            ], 
+            "name": "Tuesday"
+          }, 
+          {
+            "data": [
+              0, 
+              0, 
+              0, 
+              0, 
+              0, 
+              0, 
+              0, 
+              10, 
+              13, 
+              21, 
+              34, 
+              44, 
+              50, 
+              42, 
+              28, 
+              0, 
+              0, 
+              0, 
+              0, 
+              0, 
+              0, 
+              0, 
+              0, 
+              0
+            ], 
+            "name": "Wednesday"
+          }, 
+          {
+            "data": [
+              0, 
+              0, 
+              0, 
+              0, 
+              0, 
+              0, 
+              0, 
+              7, 
+              13, 
+              13, 
+              23, 
+              60, 
+              97, 
+              78, 
+              28, 
+              0, 
+              0, 
+              0, 
+              0, 
+              0, 
+              0, 
+              0, 
+              0, 
+              0
+            ], 
+            "name": "Thursday"
+          }, 
+          {
+            "data": [
+              0, 
+              0, 
+              0, 
+              0, 
+              0, 
+              0, 
+              0, 
+              7, 
+              23, 
+              13, 
+              13, 
+              60, 
+              100, 
+              57, 
+              13, 
+              0, 
+              0, 
+              0, 
+              0, 
+              0, 
+              0, 
+              0, 
+              0, 
+              0
+            ], 
+            "name": "Friday"
+          }, 
+          {
+            "data": [
+              0, 
+              0, 
+              0, 
+              0, 
+              0, 
+              0, 
+              0, 
+              0, 
+              0, 
+              0, 
+              0, 
+              0, 
+              0, 
+              0, 
+              0, 
+              0, 
+              0, 
+              0, 
+              0, 
+              0, 
+              0, 
+              0, 
+              0, 
+              0
+            ], 
+            "name": "Saturday"
+          }, 
+          {
+            "data": [
+              0, 
+              0, 
+              0, 
+              0, 
+              0, 
+              0, 
+              0, 
+              0, 
+              0, 
+              0, 
+              0, 
+              0, 
+              0, 
+              0, 
+              0, 
+              0, 
+              0, 
+              0, 
+              0, 
+              0, 
+              0, 
+              0, 
+              0, 
+              0
+            ], 
+            "name": "Sunday"
+          }
+        ], 
+        "rating": 4.3, 
+        "rating_n": 88, 
+        "time_spent": [
+          45, 
+          45
+        ], 
+        "types": [
+          "restaurant", 
+          "food", 
+          "point_of_interest", 
+          "establishment"
+        ]
+      }, 
+      "place_id": "ChIJrUBQGLPHwoAR-0SU8J1hLmY"
+    }, 
+    {
+      "details": {
+        "address": "401 S Hope St, Los Angeles, CA 90071, USA", 
+        "coordinates": {
+          "lat": 34.05228760000001, 
+          "lng": -118.2541395
+        }, 
+        "hasPopularTimes": false, 
+        "id": "ChIJgY6uH7PHwoAR2pE8GFHCAIQ", 
+        "name": "Public Art \"Three Graces\"", 
+        "rating": 3.5, 
+        "rating_n": 2, 
+        "types": [
+          "tourist_attraction", 
+          "point_of_interest", 
+          "establishment"
+        ]
+      }, 
+      "place_id": "ChIJgY6uH7PHwoAR2pE8GFHCAIQ"
+    }, 
+    {
+      "details": {
+        "address": "YMCA Courtyard, W 4th St, Los Angeles, CA 90071, USA", 
+        "coordinates": {
+          "lat": 34.05240279999999, 
+          "lng": -118.2545274
+        }, 
+        "hasPopularTimes": false, 
+        "id": "ChIJN0PdHbPHwoARxdisXpCAaas", 
+        "name": "Public Art \"Olympiade '84\"", 
+        "types": [
+          "tourist_attraction", 
+          "point_of_interest", 
+          "establishment"
+        ]
+      }, 
+      "place_id": "ChIJN0PdHbPHwoARxdisXpCAaas"
+    }, 
+    {
+      "details": {
+        "address": "404 Flower St, Los Angeles, CA 90071, USA", 
+        "coordinates": {
+          "lat": 34.0518342, 
+          "lng": -118.2543859
+        }, 
+        "hasPopularTimes": false, 
+        "id": "ChIJyUxsLCHHwoARA4KwwSy-l7I", 
+        "name": "J2 Parking Structure", 
+        "rating": 1.0, 
+        "rating_n": 3, 
+        "types": [
+          "parking", 
+          "point_of_interest", 
+          "establishment"
+        ]
+      }, 
+      "place_id": "ChIJyUxsLCHHwoARA4KwwSy-l7I"
+    }, 
+    {
+      "details": {
+        "address": "401 S Hope St, Los Angeles, CA 90071, USA", 
+        "coordinates": {
+          "lat": 34.0520049, 
+          "lng": -118.2546228
+        }, 
+        "hasPopularTimes": false, 
+        "id": "ChIJsSOeu3PHwoARIL2-q87KJXI", 
+        "name": "J & K Service", 
+        "types": [
+          "home_goods_store", 
+          "point_of_interest", 
+          "store", 
+          "establishment"
+        ]
+      }, 
+      "place_id": "ChIJsSOeu3PHwoARIL2-q87KJXI"
+    }, 
+    {
+      "details": {
+        "address": "400 S Hope St #720, Los Angeles, CA 90071, USA", 
+        "coordinates": {
+          "lat": 34.05176399999999, 
+          "lng": -118.253979
+        }, 
+        "hasPopularTimes": false, 
+        "id": "ChIJRVioPbPHwoARgUYbBASoG4Q", 
+        "international_phone_number": "+1 213-439-5390", 
+        "name": "Poole & Shaffery, LLP", 
+        "rating": 5.0, 
+        "rating_n": 2, 
+        "types": [
+          "lawyer", 
+          "point_of_interest", 
+          "establishment"
+        ]
+      }, 
+      "place_id": "ChIJRVioPbPHwoARgUYbBASoG4Q"
+    }, 
+    {
+      "details": {
+        "address": "400 S Hope St, Los Angeles, CA 90071, USA", 
+        "coordinates": {
+          "lat": 34.0519327, 
+          "lng": -118.2536629
+        }, 
+        "hasPopularTimes": false, 
+        "id": "ChIJ8eE_O7PHwoAR9GIOBGi7Nhc", 
+        "name": "Public Art \"Ulysses\"", 
+        "rating": 5.0, 
+        "rating_n": 3, 
+        "types": [
+          "tourist_attraction", 
+          "point_of_interest", 
+          "establishment"
+        ]
+      }, 
+      "place_id": "ChIJ8eE_O7PHwoAR9GIOBGi7Nhc"
+    }, 
+    {
+      "details": {
+        "address": "401 S Hope St, Los Angeles, CA 90071, USA", 
+        "coordinates": {
+          "lat": 34.0521135, 
+          "lng": -118.2547134
+        }, 
+        "hasPopularTimes": false, 
+        "id": "ChIJEVV5H7PHwoARb67OtDSvuh0", 
+        "international_phone_number": "+1 213-624-2348", 
+        "name": "Ketchum-Downtown YMCA", 
+        "rating": 4.4, 
+        "rating_n": 130, 
+        "types": [
+          "gym", 
+          "health", 
+          "point_of_interest", 
+          "establishment"
+        ]
+      }, 
+      "place_id": "ChIJEVV5H7PHwoARb67OtDSvuh0"
+    }, 
+    {
+      "details": {
+        "address": "400 Flower St, Los Angeles, CA 90071, USA", 
+        "coordinates": {
+          "lat": 34.0521687, 
+          "lng": -118.2547377
+        }, 
+        "hasPopularTimes": false, 
+        "id": "ChIJ87nuHLPHwoARGg9xnY1emno", 
+        "international_phone_number": "+1 888-758-4389", 
+        "name": "ChargePoint Charging Station", 
+        "types": [
+          "point_of_interest", 
+          "establishment"
+        ]
+      }, 
+      "place_id": "ChIJ87nuHLPHwoARGg9xnY1emno"
+    }, 
+    {
+      "details": {
+        "address": "400 Flower St, Los Angeles, CA 90071, USA", 
+        "coordinates": {
+          "lat": 34.0523114, 
+          "lng": -118.2547287
+        }, 
+        "hasPopularTimes": false, 
+        "id": "ChIJUfncOvLHwoARRBJJqJeq6aY", 
+        "name": "400 flowers parking", 
+        "rating": 2.8, 
+        "rating_n": 6, 
+        "types": [
+          "parking", 
+          "point_of_interest", 
+          "establishment"
+        ]
+      }, 
+      "place_id": "ChIJUfncOvLHwoARRBJJqJeq6aY"
+    }, 
+    {
+      "details": {
+        "address": "YMCA Courtyard, W 4th St, Los Angeles, CA 90071, USA", 
+        "coordinates": {
+          "lat": 34.0525783, 
+          "lng": -118.2545923
+        }, 
+        "hasPopularTimes": false, 
+        "id": "ChIJedhK4rLHwoARpm4ZjPE2y3o", 
+        "name": "Public Art \"Alchemy of the Human Spirit\"", 
+        "rating": 5.0, 
+        "rating_n": 1, 
+        "types": [
+          "tourist_attraction", 
+          "point_of_interest", 
+          "establishment"
+        ]
+      }, 
+      "place_id": "ChIJedhK4rLHwoARpm4ZjPE2y3o"
+    }, 
+    {
+      "details": {
+        "address": "499 S Hope St, Los Angeles, CA 90071, USA", 
+        "coordinates": {
+          "lat": 34.0516512, 
+          "lng": -118.2543187
+        }, 
+        "hasPopularTimes": false, 
+        "id": "ChIJl9L5FrPHwoARz6xxr9Rvlts", 
+        "name": "Parking Entry", 
+        "rating": 5.0, 
+        "rating_n": 1, 
+        "types": [
+          "park", 
+          "point_of_interest", 
+          "establishment"
+        ]
+      }, 
+      "place_id": "ChIJl9L5FrPHwoARz6xxr9Rvlts"
+    }, 
+    {
+      "details": {
+        "address": "400 S Hope St, Los Angeles, CA 90071, USA", 
+        "coordinates": {
+          "lat": 34.0517259, 
+          "lng": -118.253722
+        }, 
+        "hasPopularTimes": false, 
+        "id": "ChIJZ1x7ObPHwoARx5C2VzTGpLM", 
+        "international_phone_number": "+1 626-252-1948", 
+        "name": "Foremylife Online Services", 
+        "types": [
+          "health", 
+          "point_of_interest", 
+          "establishment"
+        ]
+      }, 
+      "place_id": "ChIJZ1x7ObPHwoARx5C2VzTGpLM"
+    }, 
+    {
+      "details": {
+        "address": "Los Angeles, CA 90071, USA", 
+        "coordinates": {
+          "lat": 34.05249500000001, 
+          "lng": -118.253515
+        }, 
+        "hasPopularTimes": false, 
+        "id": "ChIJFRNPJrPHwoARKTHtIgJuqq8", 
+        "name": "Hope St & 4th St (Arriving)", 
+        "types": [
+          "transit_station", 
+          "point_of_interest", 
+          "establishment"
+        ]
+      }, 
+      "place_id": "ChIJFRNPJrPHwoARKTHtIgJuqq8"
+    }, 
+    {
+      "details": {
+        "address": "400 S Hope St, Los Angeles, CA 90071, USA", 
+        "coordinates": {
+          "lat": 34.0516527, 
+          "lng": -118.2538051
+        }, 
+        "hasPopularTimes": false, 
+        "id": "ChIJZ1x7ObPHwoARrfx8u-P5Uyg", 
+        "international_phone_number": "+1 213-239-9800", 
+        "name": "Linda S. Goldman", 
+        "types": [
+          "lawyer", 
+          "point_of_interest", 
+          "establishment"
+        ]
+      }, 
+      "place_id": "ChIJZ1x7ObPHwoARrfx8u-P5Uyg"
+    }, 
+    {
+      "details": {
+        "address": "633 W 5H STREET FL, 26, Los Angeles, CA 90071, USA", 
+        "coordinates": {
+          "lat": 34.0516115, 
+          "lng": -118.254434
+        }, 
+        "hasPopularTimes": false, 
+        "id": "ChIJ17uZn1THwoARgY2FdFPxLek", 
+        "international_phone_number": "+1 213-223-2129", 
+        "name": "ITM LLC", 
+        "rating": 5, 
+        "types": [
+          "real_estate_agency", 
+          "point_of_interest", 
+          "establishment"
+        ]
+      }, 
+      "place_id": "ChIJ17uZn1THwoARgY2FdFPxLek"
+    }, 
+    {
+      "details": {
+        "address": "401 S Grand Ave, Los Angeles, CA 90071, USA", 
+        "coordinates": {
+          "lat": 34.05172289999999, 
+          "lng": -118.2536375
+        }, 
+        "hasPopularTimes": false, 
+        "id": "ChIJcTi4y0zGwoARQh3XkhcpIk4", 
+        "international_phone_number": "+1 213-742-5883", 
+        "name": "Family Health Center", 
+        "types": [
+          "health", 
+          "point_of_interest", 
+          "establishment"
+        ]
+      }, 
+      "place_id": "ChIJcTi4y0zGwoARQh3XkhcpIk4"
+    }, 
+    {
+      "details": {
+        "address": "Los Angeles, CA 90071, USA", 
+        "coordinates": {
+          "lat": 34.05246400000001, 
+          "lng": -118.253456
+        }, 
+        "hasPopularTimes": false, 
+        "id": "ChIJISAWJrPHwoARMj25dUpynkY", 
+        "name": "Hope St & 4th St (Departure)", 
+        "types": [
+          "transit_station", 
+          "point_of_interest", 
+          "establishment"
+        ]
+      }, 
+      "place_id": "ChIJISAWJrPHwoARMj25dUpynkY"
+    }, 
+    {
+      "details": {
+        "address": "W 4th St, Los Angeles, CA 90071, USA", 
+        "coordinates": {
+          "lat": 34.0524939, 
+          "lng": -118.2548551
+        }, 
+        "hasPopularTimes": false, 
+        "id": "ChIJ1aws_bLHwoARdW8b19hZEwk", 
+        "name": "Public Art \"Handstand\"", 
+        "types": [
+          "tourist_attraction", 
+          "point_of_interest", 
+          "establishment"
+        ]
+      }, 
+      "place_id": "ChIJ1aws_bLHwoARdW8b19hZEwk"
+    }, 
+    {
+      "details": {
+        "address": "400 S Hope St # 6, Los Angeles, CA 90071, USA", 
+        "coordinates": {
+          "lat": 34.0516429, 
+          "lng": -118.2536815
+        }, 
+        "hasPopularTimes": false, 
+        "id": "ChIJZ1x7ObPHwoARen1M_096p9s", 
+        "international_phone_number": "+1 310-660-0110", 
+        "name": "Kids Line LLC", 
+        "types": [
+          "point_of_interest", 
+          "establishment"
+        ]
+      }, 
+      "place_id": "ChIJZ1x7ObPHwoARen1M_096p9s"
+    }, 
+    {
+      "details": {
+        "address": "400 S Hope St STE 11, Los Angeles, CA 90071, USA", 
+        "coordinates": {
+          "lat": 34.0516429, 
+          "lng": -118.2536815
+        }, 
+        "hasPopularTimes": false, 
+        "id": "ChIJ6yWVOLLHwoARfx554O7-1Ac", 
+        "international_phone_number": "+1 213-439-5390", 
+        "name": "Park Boksoon C", 
+        "types": [
+          "lawyer", 
+          "point_of_interest", 
+          "establishment"
+        ]
+      }, 
+      "place_id": "ChIJ6yWVOLLHwoARfx554O7-1Ac"
+    }, 
+    {
+      "details": {
+        "address": "400 S Hope St #1300, Los Angeles, CA 90071, USA", 
+        "coordinates": {
+          "lat": 34.0515697, 
+          "lng": -118.2538168
+        }, 
+        "hasPopularTimes": true, 
+        "id": "ChIJCfQc9rTHwoARyy8yvtrt0DQ", 
+        "international_phone_number": "+1 213-452-8500", 
+        "name": "San Pasqual Fiduciary Trust Company", 
+        "populartimes": [
+          {
+            "data": [
+              0, 
+              0, 
+              0, 
+              0, 
+              0, 
+              0, 
+              0, 
+              0, 
+              0, 
+              0, 
+              0, 
+              0, 
+              0, 
+              0, 
+              0, 
+              0, 
+              0, 
+              0, 
+              0, 
+              0, 
+              0, 
+              0, 
+              0, 
+              0
+            ], 
+            "name": "Monday"
+          }, 
+          {
+            "data": [
+              0, 
+              0, 
+              0, 
+              0, 
+              0, 
+              0, 
+              0, 
+              0, 
+              53, 
+              69, 
+              76, 
+              69, 
+              46, 
+              30, 
+              15, 
+              15, 
+              15, 
+              0, 
+              0, 
+              0, 
+              0, 
+              0, 
+              0, 
+              0
+            ], 
+            "name": "Tuesday"
+          }, 
+          {
+            "data": [
+              0, 
+              0, 
+              0, 
+              0, 
+              0, 
+              0, 
+              0, 
+              0, 
+              30, 
+              38, 
+              46, 
+              46, 
+              38, 
+              30, 
+              30, 
+              23, 
+              23, 
+              0, 
+              0, 
+              0, 
+              0, 
+              0, 
+              0, 
+              0
+            ], 
+            "name": "Wednesday"
+          }, 
+          {
+            "data": [
+              0, 
+              0, 
+              0, 
+              0, 
+              0, 
+              0, 
+              0, 
+              0, 
+              30, 
+              46, 
+              53, 
+              69, 
+              76, 
+              53, 
+              30, 
+              15, 
+              7, 
+              0, 
+              0, 
+              0, 
+              0, 
+              0, 
+              0, 
+              0
+            ], 
+            "name": "Thursday"
+          }, 
+          {
+            "data": [
+              0, 
+              0, 
+              0, 
+              0, 
+              0, 
+              0, 
+              0, 
+              0, 
+              53, 
+              76, 
+              92, 
+              100, 
+              100, 
+              84, 
+              69, 
+              46, 
+              30, 
+              0, 
+              0, 
+              0, 
+              0, 
+              0, 
+              0, 
+              0
+            ], 
+            "name": "Friday"
+          }, 
+          {
+            "data": [
+              0, 
+              0, 
+              0, 
+              0, 
+              0, 
+              0, 
+              0, 
+              0, 
+              0, 
+              0, 
+              0, 
+              0, 
+              0, 
+              0, 
+              0, 
+              0, 
+              0, 
+              0, 
+              0, 
+              0, 
+              0, 
+              0, 
+              0, 
+              0
+            ], 
+            "name": "Saturday"
+          }, 
+          {
+            "data": [
+              0, 
+              0, 
+              0, 
+              0, 
+              0, 
+              0, 
+              0, 
+              0, 
+              0, 
+              0, 
+              0, 
+              0, 
+              0, 
+              0, 
+              0, 
+              0, 
+              0, 
+              0, 
+              0, 
+              0, 
+              0, 
+              0, 
+              0, 
+              0
+            ], 
+            "name": "Sunday"
+          }
+        ], 
+        "rating": 1.0, 
+        "rating_n": 2, 
+        "types": [
+          "finance", 
+          "point_of_interest", 
+          "establishment"
+        ]
+      }, 
+      "place_id": "ChIJCfQc9rTHwoARyy8yvtrt0DQ"
+    }, 
+    {
+      "details": {
+        "address": "401 S. Hope Street, YMCA Courtyard, W 4th St, Los Angeles, CA 90071, USA", 
+        "coordinates": {
+          "lat": 34.0526054, 
+          "lng": -118.2548261
+        }, 
+        "hasPopularTimes": false, 
+        "id": "ChIJU0UX47LHwoARVb8lPJiOM2E", 
+        "name": "Public Art \"Composition in Stainless Steel No. 11\"", 
+        "rating": 5, 
+        "types": [
+          "tourist_attraction", 
+          "point_of_interest", 
+          "establishment"
+        ]
+      }, 
+      "place_id": "ChIJU0UX47LHwoARVb8lPJiOM2E"
+    }, 
+    {
+      "details": {
+        "address": "400 S Hope St, Los Angeles, CA 90071, USA", 
+        "coordinates": {
+          "lat": 34.0516891, 
+          "lng": -118.2535531
+        }, 
+        "hasPopularTimes": false, 
+        "id": "ChIJ9ZKxId_HwoARUB-BweUslq0", 
+        "name": "Padilla Design Groups [Secondary Location]", 
+        "types": [
+          "point_of_interest", 
+          "establishment"
+        ]
+      }, 
+      "place_id": "ChIJ9ZKxId_HwoARUB-BweUslq0"
+    }, 
+    {
+      "details": {
+        "address": "400 S Hope St, Los Angeles, CA 90071, USA", 
+        "coordinates": {
+          "lat": 34.05164219999999, 
+          "lng": -118.2535883
+        }, 
+        "hasPopularTimes": false, 
+        "id": "ChIJuVHwO7PHwoARPMDft-f1WEs", 
+        "international_phone_number": "+1 213-613-3333", 
+        "name": "CBRE Global Headquarters", 
+        "rating": 4.2, 
+        "rating_n": 11, 
+        "types": [
+          "real_estate_agency", 
+          "point_of_interest", 
+          "establishment"
+        ]
+      }, 
+      "place_id": "ChIJuVHwO7PHwoARPMDft-f1WEs"
+    }, 
+    {
+      "details": {
+        "address": "400 S Hope St, Los Angeles, CA 90071, USA", 
+        "coordinates": {
+          "lat": 34.0516069, 
+          "lng": -118.2536324
+        }, 
+        "hasPopularTimes": false, 
+        "id": "ChIJ5ZHXOLPHwoARbS8V6PoMm50", 
+        "international_phone_number": "+1 800-935-9935", 
+        "name": "Chase ATM", 
+        "rating": 4.0, 
+        "rating_n": 1, 
+        "types": [
+          "atm", 
+          "finance", 
+          "point_of_interest", 
+          "establishment"
+        ]
+      }, 
+      "place_id": "ChIJ5ZHXOLPHwoARbS8V6PoMm50"
+    }, 
+    {
+      "details": {
+        "address": "400 S Hope St 25th floor, Los Angeles, CA 90071, USA", 
+        "coordinates": {
+          "lat": 34.0516069, 
+          "lng": -118.2536324
+        }, 
+        "hasPopularTimes": false, 
+        "id": "ChIJCU0SObPHwoARSpKZF34Y3zc", 
+        "international_phone_number": "+1 310-606-5023", 
+        "name": "CBRE", 
+        "rating": 4.2, 
+        "rating_n": 11, 
+        "types": [
+          "point_of_interest", 
+          "establishment"
+        ]
+      }, 
+      "place_id": "ChIJCU0SObPHwoARSpKZF34Y3zc"
+    }, 
+    {
+      "details": {
+        "address": "400 S Hope St #300, Los Angeles, CA 90071, USA", 
+        "coordinates": {
+          "lat": 34.0516069, 
+          "lng": -118.2536324
+        }, 
+        "hasPopularTimes": true, 
+        "id": "ChIJDfep7bTHwoARampuf-EsLyc", 
+        "international_phone_number": "+1 213-430-4000", 
+        "name": "American Business Bank", 
+        "populartimes": [
+          {
+            "data": [
+              0, 
+              0, 
+              0, 
+              0, 
+              0, 
+              0, 
+              0, 
+              0, 
+              0, 
+              0, 
+              41, 
+              75, 
+              68, 
+              34, 
+              44, 
+              0, 
+              0, 
+              0, 
+              0, 
+              0, 
+              0, 
+              0, 
+              0, 
+              0
+            ], 
+            "name": "Monday"
+          }, 
+          {
+            "data": [
+              0, 
+              0, 
+              0, 
+              0, 
+              0, 
+              0, 
+              0, 
+              0, 
+              0, 
+              0, 
+              65, 
+              55, 
+              41, 
+              48, 
+              100, 
+              0, 
+              0, 
+              0, 
+              0, 
+              0, 
+              0, 
+              0, 
+              0, 
+              0
+            ], 
+            "name": "Tuesday"
+          }, 
+          {
+            "data": [
+              0, 
+              0, 
+              0, 
+              0, 
+              0, 
+              0, 
+              0, 
+              0, 
+              0, 
+              0, 
+              34, 
+              41, 
+              37, 
+              34, 
+              62, 
+              0, 
+              0, 
+              0, 
+              0, 
+              0, 
+              0, 
+              0, 
+              0, 
+              0
+            ], 
+            "name": "Wednesday"
+          }, 
+          {
+            "data": [
+              0, 
+              0, 
+              0, 
+              0, 
+              0, 
+              0, 
+              0, 
+              0, 
+              0, 
+              0, 
+              44, 
+              41, 
+              31, 
+              37, 
+              75, 
+              0, 
+              0, 
+              0, 
+              0, 
+              0, 
+              0, 
+              0, 
+              0, 
+              0
+            ], 
+            "name": "Thursday"
+          }, 
+          {
+            "data": [
+              0, 
+              0, 
+              0, 
+              0, 
+              0, 
+              0, 
+              0, 
+              0, 
+              0, 
+              0, 
+              62, 
+              55, 
+              48, 
+              37, 
+              34, 
+              0, 
+              0, 
+              0, 
+              0, 
+              0, 
+              0, 
+              0, 
+              0, 
+              0
+            ], 
+            "name": "Friday"
+          }, 
+          {
+            "data": [
+              0, 
+              0, 
+              0, 
+              0, 
+              0, 
+              0, 
+              0, 
+              0, 
+              0, 
+              0, 
+              0, 
+              0, 
+              0, 
+              0, 
+              0, 
+              0, 
+              0, 
+              0, 
+              0, 
+              0, 
+              0, 
+              0, 
+              0, 
+              0
+            ], 
+            "name": "Saturday"
+          }, 
+          {
+            "data": [
+              0, 
+              0, 
+              0, 
+              0, 
+              0, 
+              0, 
+              0, 
+              0, 
+              0, 
+              0, 
+              0, 
+              0, 
+              0, 
+              0, 
+              0, 
+              0, 
+              0, 
+              0, 
+              0, 
+              0, 
+              0, 
+              0, 
+              0, 
+              0
+            ], 
+            "name": "Sunday"
+          }
+        ], 
+        "rating": 1.8, 
+        "rating_n": 6, 
+        "types": [
+          "bank", 
+          "finance", 
+          "point_of_interest", 
+          "establishment"
+        ]
+      }, 
+      "place_id": "ChIJDfep7bTHwoARampuf-EsLyc"
+    }, 
+    {
+      "details": {
+        "address": "400 S Hope St, Los Angeles, CA 90071, USA", 
+        "coordinates": {
+          "lat": 34.0516069, 
+          "lng": -118.2536324
+        }, 
+        "hasPopularTimes": false, 
+        "id": "ChIJZ1x7ObPHwoARa20uBDwEjsk", 
+        "name": "Bodnar Alexandra A", 
+        "types": [
+          "lawyer", 
+          "point_of_interest", 
+          "establishment"
+        ]
+      }, 
+      "place_id": "ChIJZ1x7ObPHwoARa20uBDwEjsk"
+    }, 
+    {
+      "details": {
+        "address": "400 S Hope St #1050, Los Angeles, CA 90071, USA", 
+        "coordinates": {
+          "lat": 34.0516069, 
+          "lng": -118.2536324
+        }, 
+        "hasPopularTimes": false, 
+        "id": "ChIJj7Hc06HHwoARe2HByh29HoE", 
+        "international_phone_number": "+1 323-510-5476", 
+        "name": "Valley Heavy Haul", 
+        "types": [
+          "moving_company", 
+          "point_of_interest", 
+          "establishment"
+        ]
+      }, 
+      "place_id": "ChIJj7Hc06HHwoARe2HByh29HoE"
+    }, 
+    {
+      "details": {
+        "address": "400 S Hope St #2500, Los Angeles, CA 90071, USA", 
+        "coordinates": {
+          "lat": 34.051607, 
+          "lng": -118.253632
+        }, 
+        "hasPopularTimes": false, 
+        "id": "ChIJXYQYDLPHwoARFQsyrbLqCGY", 
+        "international_phone_number": "+1 619-508-2744", 
+        "name": "CBRE | Heery", 
+        "types": [
+          "general_contractor", 
+          "point_of_interest", 
+          "establishment"
+        ]
+      }, 
+      "place_id": "ChIJXYQYDLPHwoARFQsyrbLqCGY"
+    }, 
+    {
+      "details": {
+        "address": "400 S Hope St # 1060, Los Angeles, CA 90071, USA", 
+        "coordinates": {
+          "lat": 34.05160679999999, 
+          "lng": -118.2536323
+        }, 
+        "hasPopularTimes": false, 
+        "id": "ChIJZ1x7ObPHwoARFzr9l58dLAA", 
+        "international_phone_number": "+1 323-669-6000", 
+        "name": "Krischer Gordon E", 
+        "types": [
+          "lawyer", 
+          "point_of_interest", 
+          "establishment"
+        ]
+      }, 
+      "place_id": "ChIJZ1x7ObPHwoARFzr9l58dLAA"
+    }, 
+    {
+      "details": {
+        "address": "400 Hope Pl # 200, Los Angeles, CA 90071, USA", 
+        "coordinates": {
+          "lat": 34.05160679999999, 
+          "lng": -118.2536323
+        }, 
+        "hasPopularTimes": false, 
+        "id": "ChIJZ1x7ObPHwoAR1x_3c_Hd-fs", 
+        "name": "Tishman Speyer", 
+        "types": [
+          "real_estate_agency", 
+          "point_of_interest", 
+          "establishment"
+        ]
+      }, 
+      "place_id": "ChIJZ1x7ObPHwoAR1x_3c_Hd-fs"
+    }, 
+    {
+      "details": {
+        "address": "400 S Hope St #1050, Los Angeles, CA 90071, USA", 
+        "coordinates": {
+          "lat": 34.05160679999999, 
+          "lng": -118.2536323
+        }, 
+        "hasPopularTimes": false, 
+        "id": "ChIJD32JzbLHwoAR3nOYrfXr5eE", 
+        "international_phone_number": "+1 213-289-9060", 
+        "name": "SierraConstellation Partners, LLC", 
+        "types": [
+          "point_of_interest", 
+          "establishment"
+        ]
+      }, 
+      "place_id": "ChIJD32JzbLHwoAR3nOYrfXr5eE"
+    }, 
+    {
+      "details": {
+        "address": "400 S Hope St, Los Angeles, CA 90071, USA", 
+        "coordinates": {
+          "lat": 34.05160679999999, 
+          "lng": -118.2536323
+        }, 
+        "hasPopularTimes": false, 
+        "id": "ChIJq00SObPHwoARIAnnottPaS4", 
+        "international_phone_number": "+1 818-334-9627", 
+        "name": "Bruce S. Ross Mediation", 
+        "types": [
+          "point_of_interest", 
+          "establishment"
+        ]
+      }, 
+      "place_id": "ChIJq00SObPHwoARIAnnottPaS4"
+    }, 
+    {
+      "details": {
+        "address": "400 S Hope St, Los Angeles, CA 90071, USA", 
+        "coordinates": {
+          "lat": 34.05160679999999, 
+          "lng": -118.2536323
+        }, 
+        "hasPopularTimes": false, 
+        "id": "ChIJq00SObPHwoARcFsAGU-P-qY", 
+        "international_phone_number": "+1 213-430-6552", 
+        "name": "Regional Airports Improvement Corporation", 
+        "types": [
+          "point_of_interest", 
+          "establishment"
+        ]
+      }, 
+      "place_id": "ChIJq00SObPHwoARcFsAGU-P-qY"
+    }, 
+    {
+      "details": {
+        "address": "400 S Hope St, Los Angeles, CA 90071, USA", 
+        "coordinates": {
+          "lat": 34.05160679999999, 
+          "lng": -118.2536323
+        }, 
+        "hasPopularTimes": false, 
+        "id": "ChIJJ808FbPHwoARxXZgrmL49_4", 
+        "international_phone_number": "+1 213-896-2400", 
+        "name": "Holland & Knight LLP", 
+        "rating": 4.0, 
+        "rating_n": 1, 
+        "types": [
+          "lawyer", 
+          "point_of_interest", 
+          "establishment"
+        ]
+      }, 
+      "place_id": "ChIJJ808FbPHwoARxXZgrmL49_4"
+    }, 
+    {
+      "details": {
+        "address": "400 S Hope St # 1060, Los Angeles, CA 90071, USA", 
+        "coordinates": {
+          "lat": 34.05160679999999, 
+          "lng": -118.2536323
+        }, 
+        "hasPopularTimes": false, 
+        "id": "ChIJZ1x7ObPHwoARZ1cz8YVOyKw", 
+        "international_phone_number": "+1 323-669-6000", 
+        "name": "Jones Evan M", 
+        "types": [
+          "lawyer", 
+          "point_of_interest", 
+          "establishment"
+        ]
+      }, 
+      "place_id": "ChIJZ1x7ObPHwoARZ1cz8YVOyKw"
+    }, 
+    {
+      "details": {
+        "address": "400 Hope Pl # 1060, Los Angeles, CA 90071, USA", 
+        "coordinates": {
+          "lat": 34.05160679999999, 
+          "lng": -118.2536323
+        }, 
+        "hasPopularTimes": false, 
+        "id": "ChIJZ1x7ObPHwoAR5_-ycfivS3o", 
+        "international_phone_number": "+1 213-430-6570", 
+        "name": "Thomas W. Baxter", 
+        "types": [
+          "finance", 
+          "point_of_interest", 
+          "establishment"
+        ]
+      }, 
+      "place_id": "ChIJZ1x7ObPHwoAR5_-ycfivS3o"
+    }, 
+    {
+      "details": {
+        "address": "400 S Hope St, Los Angeles, CA 90071, USA", 
+        "coordinates": {
+          "lat": 34.051574, 
+          "lng": -118.253631
+        }, 
+        "hasPopularTimes": false, 
+        "id": "ChIJ1fMaObPHwoARO34F3TKXmis", 
+        "international_phone_number": "+1 888-758-4389", 
+        "name": "ChargePoint Charging Station", 
+        "types": [
+          "point_of_interest", 
+          "establishment"
+        ]
+      }, 
+      "place_id": "ChIJ1fMaObPHwoARO34F3TKXmis"
+    }, 
+    {
+      "details": {
+        "address": "633 W 5th St, Los Angeles, CA 90071, USA", 
+        "coordinates": {
+          "lat": 34.0514597, 
+          "lng": -118.2543492
+        }, 
+        "hasPopularTimes": false, 
+        "id": "ChIJ_3AGFLPHwoAReeS6IhMFyes", 
+        "name": "Public Art \"Source Figure\"", 
+        "rating": 4.0, 
+        "rating_n": 1, 
+        "types": [
+          "tourist_attraction", 
+          "point_of_interest", 
+          "establishment"
+        ]
+      }, 
+      "place_id": "ChIJ_3AGFLPHwoAReeS6IhMFyes"
+    }, 
+    {
+      "details": {
+        "address": "333 W 4th St, Los Angeles, CA 90071, USA", 
+        "coordinates": {
+          "lat": 34.05293299999999, 
+          "lng": -118.253952
+        }, 
+        "hasPopularTimes": false, 
+        "id": "ChIJr_nS3bLHwoARg2GjAaVh_ss", 
+        "international_phone_number": "+1 888-758-4389", 
+        "name": "ChargePoint Charging Station", 
+        "types": [
+          "point_of_interest", 
+          "establishment"
+        ]
+      }, 
+      "place_id": "ChIJr_nS3bLHwoARg2GjAaVh_ss"
+    }, 
+    {
+      "details": {
+        "address": "400 S Hope St #8, Los Angeles, CA 90071, USA", 
+        "coordinates": {
+          "lat": 34.0516139, 
+          "lng": -118.2535475
+        }, 
+        "hasPopularTimes": false, 
+        "id": "ChIJlQ2kvCWx4RQR7Al1PP3J5EI", 
+        "international_phone_number": "+1 213-896-2510", 
+        "name": "Richard E Lyon Jr", 
+        "types": [
+          "lawyer", 
+          "point_of_interest", 
+          "establishment"
+        ]
+      }, 
+      "place_id": "ChIJlQ2kvCWx4RQR7Al1PP3J5EI"
+    }, 
+    {
+      "details": {
+        "address": "400 S Hope St #8, Los Angeles, CA 90071, USA", 
+        "coordinates": {
+          "lat": 34.0516228, 
+          "lng": -118.2535314
+        }, 
+        "hasPopularTimes": false, 
+        "id": "ChIJlQ2kvCWx4RQRKF1BSidb7NQ", 
+        "international_phone_number": "+1 213-896-2452", 
+        "name": "Francis W. Costello", 
+        "types": [
+          "lawyer", 
+          "point_of_interest", 
+          "establishment"
+        ]
+      }, 
+      "place_id": "ChIJlQ2kvCWx4RQRKF1BSidb7NQ"
+    }, 
+    {
+      "details": {
+        "address": "400 S Hope St #1060, Los Angeles, CA 90071, USA", 
+        "coordinates": {
+          "lat": 34.05155399999999, 
+          "lng": -118.2535836
+        }, 
+        "hasPopularTimes": false, 
+        "id": "ChIJZ1x7ObPHwoARXwJhFlOoOYk", 
+        "international_phone_number": "+1 213-430-6000", 
+        "name": "Kim Joseph K", 
+        "types": [
+          "lawyer", 
+          "point_of_interest", 
+          "establishment"
+        ]
+      }, 
+      "place_id": "ChIJZ1x7ObPHwoARXwJhFlOoOYk"
+    }, 
+    {
+      "details": {
+        "address": "401 S Hope Street YMCA, Los Angeles, CA 90071, USA", 
+        "coordinates": {
+          "lat": 34.0522726, 
+          "lng": -118.2551042
+        }, 
+        "hasPopularTimes": false, 
+        "id": "ChIJS2t4ArPHwoARFlIROX3hN9k", 
+        "name": "Public Art \"Endangered\"", 
+        "rating": 5.0, 
+        "rating_n": 1, 
+        "types": [
+          "tourist_attraction", 
+          "point_of_interest", 
+          "establishment"
+        ]
+      }, 
+      "place_id": "ChIJS2t4ArPHwoARFlIROX3hN9k"
+    }, 
+    {
+      "details": {
+        "address": "400 S Hope St, Los Angeles, CA 90071, USA", 
+        "coordinates": {
+          "lat": 34.05155, 
+          "lng": -118.2535664
+        }, 
+        "hasPopularTimes": false, 
+        "id": "ChIJ3xtVOLPHwoARE2alkocLAWM", 
+        "international_phone_number": "+1 213-623-7484", 
+        "name": "ABM Parking Services", 
+        "rating": 3.7, 
+        "rating_n": 3, 
+        "types": [
+          "parking", 
+          "point_of_interest", 
+          "establishment"
+        ]
+      }, 
+      "place_id": "ChIJ3xtVOLPHwoARE2alkocLAWM"
+    }, 
+    {
+      "details": {
+        "address": "U.S. Bank Tower, Los Angeles, CA 90071, USA", 
+        "coordinates": {
+          "lat": 34.05141270000001, 
+          "lng": -118.2543756
+        }, 
+        "hasPopularTimes": false, 
+        "id": "ChIJLQR2gDrHwoARqzoaaqKuud4", 
+        "name": "SKYSLIDER", 
+        "types": [
+          "museum", 
+          "point_of_interest", 
+          "establishment"
+        ]
+      }, 
+      "place_id": "ChIJLQR2gDrHwoARqzoaaqKuud4"
+    }, 
+    {
+      "details": {
+        "address": "400 S Hope St, Los Angeles, CA 90071, USA", 
+        "coordinates": {
+          "lat": 34.0515513, 
+          "lng": -118.2535169
+        }, 
+        "hasPopularTimes": false, 
+        "id": "ChIJuVHwO7PHwoARy3fSKFAPY4w", 
+        "international_phone_number": "+1 213-430-8178", 
+        "name": "Christopher A. Adams", 
+        "types": [
+          "lawyer", 
+          "point_of_interest", 
+          "establishment"
+        ]
+      }, 
+      "place_id": "ChIJuVHwO7PHwoARy3fSKFAPY4w"
+    }, 
+    {
+      "details": {
+        "address": "400 S Hope St, Los Angeles, CA 90071, USA", 
+        "coordinates": {
+          "lat": 34.051552, 
+          "lng": -118.2534983
+        }, 
+        "hasPopularTimes": false, 
+        "id": "ChIJKYRJOLPHwoARoD4-2yEg5uM", 
+        "international_phone_number": "+1 213-624-8020", 
+        "name": "Just Downstairs", 
+        "types": [
+          "point_of_interest", 
+          "establishment"
+        ]
+      }, 
+      "place_id": "ChIJKYRJOLPHwoARoD4-2yEg5uM"
+    }, 
+    {
+      "details": {
+        "address": "400 S Hope St, Los Angeles, CA 90071, USA", 
+        "coordinates": {
+          "lat": 34.051552, 
+          "lng": -118.2534983
+        }, 
+        "hasPopularTimes": false, 
+        "id": "ChIJZ1x7ObPHwoARPFuutT6k7rQ", 
+        "international_phone_number": "+1 213-553-9500", 
+        "name": "BNY Mellon Asset Servicing", 
+        "rating": 3.2, 
+        "rating_n": 5, 
+        "types": [
+          "bank", 
+          "atm", 
+          "finance", 
+          "point_of_interest", 
+          "establishment"
+        ]
+      }, 
+      "place_id": "ChIJZ1x7ObPHwoARPFuutT6k7rQ"
+    }, 
+    {
+      "details": {
+        "address": "400 S Hope St, Los Angeles, CA 90071, USA", 
+        "coordinates": {
+          "lat": 34.051552, 
+          "lng": -118.2534983
+        }, 
+        "hasPopularTimes": false, 
+        "id": "ChIJg3xJOLPHwoARc-UL80d7Ync", 
+        "international_phone_number": "+1 213-555-6789", 
+        "name": "One Corporate Tower", 
+        "types": [
+          "point_of_interest", 
+          "establishment"
+        ]
+      }, 
+      "place_id": "ChIJg3xJOLPHwoARc-UL80d7Ync"
+    }, 
+    {
+      "details": {
+        "address": "400 S Hope St, Los Angeles, CA 90071, USA", 
+        "coordinates": {
+          "lat": 34.051552, 
+          "lng": -118.2534983
+        }, 
+        "hasPopularTimes": false, 
+        "id": "ChIJg3xJOLPHwoARIrxNMhu4Whw", 
+        "international_phone_number": "+1 213-443-5056", 
+        "name": "400 South Hope", 
+        "rating": 4.3, 
+        "rating_n": 3, 
+        "types": [
+          "real_estate_agency", 
+          "point_of_interest", 
+          "establishment"
+        ]
+      }, 
+      "place_id": "ChIJg3xJOLPHwoARIrxNMhu4Whw"
+    }, 
+    {
+      "details": {
+        "address": "400 S Hope St #250, Los Angeles, CA 90071, USA", 
+        "coordinates": {
+          "lat": 34.051552, 
+          "lng": -118.2534983
+        }, 
+        "hasPopularTimes": false, 
+        "id": "ChIJg3xJOLPHwoAR-TpmDCgR8Ko", 
+        "international_phone_number": "+1 213-788-3366", 
+        "name": "Isis Commercial Interiors, Inc.", 
+        "rating": 1.0, 
+        "rating_n": 1, 
+        "types": [
+          "general_contractor", 
+          "point_of_interest", 
+          "establishment"
+        ]
+      }, 
+      "place_id": "ChIJg3xJOLPHwoAR-TpmDCgR8Ko"
+    }, 
+    {
+      "details": {
+        "address": "400 S Hope St, Los Angeles, CA 90071, USA", 
+        "coordinates": {
+          "lat": 34.051552, 
+          "lng": -118.2534983
+        }, 
+        "hasPopularTimes": false, 
+        "id": "ChIJg3xJOLPHwoARVP06yr3zs04", 
+        "international_phone_number": "+1 213-896-2585", 
+        "name": "IALA", 
+        "types": [
+          "point_of_interest", 
+          "establishment"
+        ]
+      }, 
+      "place_id": "ChIJg3xJOLPHwoARVP06yr3zs04"
+    }, 
+    {
+      "details": {
+        "address": "at the Lobby, 400 S Hope St, Los Angeles, CA 90071, USA", 
+        "coordinates": {
+          "lat": 34.051552, 
+          "lng": -118.2534983
+        }, 
+        "hasPopularTimes": false, 
+        "id": "ChIJg3xJOLPHwoAR9olqRfbiX1c", 
+        "international_phone_number": "+1 877-346-6244", 
+        "name": "Amazon Hub Locker - Decaf", 
+        "rating": 3.8, 
+        "rating_n": 5, 
+        "types": [
+          "point_of_interest", 
+          "establishment"
+        ]
+      }, 
+      "place_id": "ChIJg3xJOLPHwoAR9olqRfbiX1c"
+    }, 
+    {
+      "details": {
+        "address": "400 S Hope St, Los Angeles, CA 90071, USA", 
+        "coordinates": {
+          "lat": 34.051552, 
+          "lng": -118.2534983
+        }, 
+        "hasPopularTimes": false, 
+        "id": "ChIJKYRJOLPHwoARkX4kvB9dW8I", 
+        "international_phone_number": "+1 571-210-8000", 
+        "name": "Fitzsimmons Todd", 
+        "types": [
+          "lawyer", 
+          "point_of_interest", 
+          "establishment"
+        ]
+      }, 
+      "place_id": "ChIJKYRJOLPHwoARkX4kvB9dW8I"
+    }, 
+    {
+      "details": {
+        "address": "401 S Hope St, Los Angeles, CA 90071, USA", 
+        "coordinates": {
+          "lat": 34.0521521, 
+          "lng": -118.2531147
+        }, 
+        "hasPopularTimes": false, 
+        "id": "ChIJdda2H7PHwoARXysT4AKSfDs", 
+        "international_phone_number": "+1 888-758-4389", 
+        "name": "ChargePoint Charging Station", 
+        "types": [
+          "point_of_interest", 
+          "establishment"
+        ]
+      }, 
+      "place_id": "ChIJdda2H7PHwoARXysT4AKSfDs"
+    }, 
+    {
+      "details": {
+        "address": "633 W 5th St #5800, Los Angeles, CA 90071, USA", 
+        "coordinates": {
+          "lat": 34.0513262, 
+          "lng": -118.2541663
+        }, 
+        "hasPopularTimes": false, 
+        "id": "ChIJJ808FbPHwoAR-yQ5-Z8HbX0", 
+        "international_phone_number": "+1 213-689-8111", 
+        "name": "American Rena International Corporation", 
+        "types": [
+          "point_of_interest", 
+          "store", 
+          "establishment"
+        ]
+      }, 
+      "place_id": "ChIJJ808FbPHwoAR-yQ5-Z8HbX0"
+    }
+  ]
+}
